@@ -1,0 +1,75 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add more fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='images/background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
+            Demo CF
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('articles') }}">Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('images') }}">Images</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('videos') }}">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('feedbacks') }}">Feedbacks</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container mt-5">
+        {% block content %}
+             <!-- Jumbotron -->
+            <div class="container mt-5">
+                <div class="jumbotron">
+                    <!-- Highlighted text box -->
+                    <div class="highlight-box">
+                        <h1 class="display-4">Hello World</h1>
+                        <p class="lead">Every great success relies on a great behorehand preparation.</p>
+                        <hr class="my-4">
+                        <p>Welcome to our dynamic platform, where words, images, and videos come together to enlighten, entertain, and inspire. Explore a diverse array of articles, captivating images, and engaging videos curated to enrich your mind and spark your imagination.</p>
+                        <a class="btn btn-primary btn-lg" href="/images" role="button">More images</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shapes -->
+            <div class="shape"></div>
+        {% endblock %}
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Articles
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Explore Our Latest Articles!</h1>
+        <p class="lead">Stay informed with our insightful articles.</p>
+    </div>
+
+    <!-- Article list -->
+    <div class="list-group">
+        {% for article in articles %}
+        <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ article['title'] }}</h5>
+                <small>{{ article['date'] }}</small>
+            </div>
+            <p class="mb-1">{{ article['summary'] }}</p>
+            <small>By {{ article['author'] }}</small>
+        </a>
+        {% endfor %}
+    </div>
+{% endblock %}

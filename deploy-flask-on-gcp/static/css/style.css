@@ -1,0 +1,100 @@
+/* Add more colors */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Center text */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+/* Fancy backgrounds */
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Add more fonts */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Arial', sans-serif;
+}
+
+.card-title {
+    font-family: 'Verdana', sans-serif;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.6); /* Increased opacity */
+    border-radius: 20px;
+    padding: 20px;
+}
+.shape {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.highlight-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+}
+/* style.css */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    font-family: 'Roboto', sans-serif; /* Adding a nice font */
+}
+
+.container {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: auto;
+}
+
+.jumbotron {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* Centering text */
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+.btn-primary {
+    border-radius: 10px;
+    background-color: #007bff; /* Nice button color */
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+}

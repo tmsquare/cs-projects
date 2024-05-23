@@ -1,1 +1,1 @@
-# cs-projects
+# tech-projects

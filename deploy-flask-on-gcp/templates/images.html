@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Images
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Welcome to Our Photography Agency!</h1>
+        <p class="lead">Browse through our collection of beautiful images.</p>
+    </div>
+
+    <!-- Image list -->
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <img src="{{ url_for('static', filename='images/' + image['filename']) }}" class="card-img-top" alt="{{ image['title'] }}">
+                <div class="card-body">
+                    <p class="card-text">{{ image['description'] }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
